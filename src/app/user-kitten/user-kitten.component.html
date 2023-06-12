@@ -1,0 +1,10 @@
+<p>user-kitten works!</p>
+
+
+<div>
+    <h1>Mes chatons adoptés</h1>
+    <div *ngFor="let kitten of adoptedKittens">
+      <img [src]="kitten.image" [alt]="kitten.name">
+    </div>
+  </div>
+  

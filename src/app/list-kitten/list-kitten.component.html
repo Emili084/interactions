@@ -1,0 +1,18 @@
+<p>list-kitten works!</p>
+
+
+<div>
+    <h1>Liste des chatons disponibles</h1>
+    <div *ngFor="let kitten of kittens">
+      <div>
+        <img [src]="kitten.image" [alt]="kitten.name">
+        <div>
+          <h2>{{kitten.name}}</h2>
+          <p>{{kitten.breed}}</p>
+          <p>{{kitten.birthdate | date:'dd/MM/yyyy'}}</p>
+          <button (click)="adoptKitten(kitten)">Adopter</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

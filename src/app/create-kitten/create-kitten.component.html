@@ -1,0 +1,25 @@
+<p>create-kitten works!</p>
+
+<div>
+    <h1>Ajouter un chaton</h1>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <div>
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" [(ngModel)]="kitten.name" required>
+      </div>
+      <div>
+        <label for="breed">Race</label>
+        <input type="text" id="breed" name="breed" [(ngModel)]="kitten.breed" required>
+      </div>
+      <div>
+        <label for="birthdate">Date de naissance</label>
+        <input type="date" id="birthdate" name="birthdate" [(ngModel)]="kitten.birthdate" required>
+      </div>
+      <div>
+        <label for="image">Lien vers l'image</label>
+        <input type="text" id="image" name="image" [(ngModel)]="kitten.image" required>
+      </div>
+      <button type="submit" [disabled]="!form.valid">Ajouter</button>
+    </form>
+  </div>
+  
